@@ -62,6 +62,15 @@ def id_generator(size=20, chars=string.ascii_lowercase + string.digits + string.
 
 
 
+def make_dir(path):
+    try: 
+        os.makedirs(path)
+    except OSError:
+        if not os.path.isdir(path):
+            raise
+
+
+
 class DynamicFrame(QWidget):
     def __init__(self, parent, *args, **kwargs):
         super(DynamicFrame, self).__init__()
@@ -311,21 +320,17 @@ class FullscreenWindow:
         self.qt.setLayout(self.qt.vbox)
 
 
-def make_dir(path):
-    try: 
-        os.makedirs(path)
-    except OSError:
-        if not os.path.isdir(path):
-            raise
-        
+
 if __name__ == '__main__':
+    make_dir(tmp_path)
+    make_dir(unknown_user_path)
     for root, dirs, files in os.walk(tmp_path):
         for f in files:
             os.unlink(os.path.join(root, f))
         for d in dirs:
             shutil.rmtree(os.path.join(root, d))
 
-    make_dir(tmp_path)
+    
     a = QApplication(sys.argv)
     w = FullscreenWindow(a)
     sys.exit(a.exec_())

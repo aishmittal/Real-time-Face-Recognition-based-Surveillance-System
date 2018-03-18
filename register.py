@@ -82,6 +82,13 @@ def query(comm,params):
     conn.commit()
     return cursor    
 
+def make_dir(path):
+    try: 
+        os.makedirs(path)
+    except OSError:
+        if not os.path.isdir(path):
+            raise
+        
 
 class SignUpForm(QFrame):
     def __init__(self, parent, *args, **kwargs):
@@ -537,5 +544,6 @@ class MainWindow:
 
 
 if __name__ == '__main__':
+    make_dir(dataset_path)
     a = QApplication(sys.argv)
     w = MainWindow(),sys.exit(a.exec_())
