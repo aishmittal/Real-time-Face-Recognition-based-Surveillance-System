@@ -1,2 +1,5 @@
+dataset/
+tmp/
+unknowns/
 screenshots/
-cfg.ini
+users.db
