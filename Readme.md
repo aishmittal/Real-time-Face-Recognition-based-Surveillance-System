@@ -5,6 +5,8 @@ Real-time Face Recognition based Surveillance System uses [MS-FACE](https://azur
 ### New User Registration
 Register application used to register the new user by taking some information about user and storing the information in a database and creating personid using Microsoft Face APIs. After the Face Dataset is generated using Opencv2. this generated face dataset is later uploaded to cloudinary and Microsoft cognitive service face APIs. after uploading dataset to microsoft cognitive service a model is build and trained.
 
+
+#### Steps for Registeration of a new person
 1. Run register.py file using ```python register.py```. It will open pyqt GUI window.
 2. Edit the details of users to be registered.
 3. Click Verify Data button.
