@@ -26,7 +26,7 @@ Register application used to register the new user by taking some information ab
 ### Surveillance
 Surveillance app takes images at a regular time interval defined by *detection_interval* in ms (default value=10000, means 10 seconds). After taking images it extract all faces from the images using ***haarcascade*** classifier in opencv. These face images are then uploaded to cloudinary and the cloudinary link is passed with api request to msface api. Two requests are send for a face identification first to add the face and generate a *face_id* and second to get *person_id* from the *face_id*. The *person_id* is used to get the information of the person from sqlite3 database (users.db). A green rectangle is drawn around the identified persons faces with there name while for unidentified persons a red rectangle is drawn with Unknown as their names. faces of all unknown persons are stored in *Unknowns* folder in the main directory with the current date and time which can be checked later for surveillance.
 
-!(main1)[/screenshots/main1.png]
+![main1](/screenshots/main1.png)
 
  
 ## Language used
