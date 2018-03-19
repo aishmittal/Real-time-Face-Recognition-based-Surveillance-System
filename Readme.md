@@ -36,11 +36,33 @@ Surveillance app takes images at a regular time interval defined by *detection_i
  Python 2.7
  
 
-## Python Packages Required
- 1. Opencv 2
- 2. PtQt 4
- 3. Sqlite3
- 4. PIL
+## Required Python Libraries
+ 1. Opencv2
+ 2. PtQt4
+ 4. Configparser
+ 5. Cloudinary
+ 
+ ### Installing required libraries
+ 1. Opencv2 
+ i. **Ubuntu/Linux** ```sudo apt-get install python-opencv```
+ ii. **Windows** follow [this link](http://opencvpython.blogspot.in/2012/05/install-opencv-in-windows-for-python.html)
+    
+ 2. pip for python2.7
+ i. **Ubuntu/Linux** ```sudo apt-get install python-pip```
+ ii. **Windows** Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py). Then run ```python get-pip.py```
+ 
+ 3. PyQt4
+ i. **Ubuntu/Linux** ```sudo apt-get install python-qt4``` 
+ ii. **Windows** 
+  a. Download pyqt4 wheel file from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4 (Download cp27 file for python2.7)
+  b. Run ```pip install wheel_file_name``` like ```pip install PyQt4-4.11.4-cp35-none-win_amd64.whl```
+        
+ 4. Configparser
+ Run ```pip install configparser```
+    
+ 5. Cloudinary
+ Run ```pip install cloudinary```
+ 
  
  
 ## APIs used
