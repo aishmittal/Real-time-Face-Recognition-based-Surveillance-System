@@ -57,14 +57,12 @@ Surveillance app takes images at a regular time interval defined by *detection_i
  
  3. PyQt4
   * **Ubuntu/Linux** ```sudo apt-get install python-qt4``` 
-  * **Windows** 
-  - Download pyqt4 wheel file from [this link](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4) (Download cp27 file for python2.7)
-  - Run ```pip install wheel_file_name``` like ```pip install PyQt4-4.11.4-cp35-none-win_amd64.whl```
+  * **Windows**  Download pyqt4 wheel file from [this link](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4) (Download cp27 file for python2.7) Then Run ```pip install wheel_file_name``` like ```pip install PyQt4-4.11.4-cp35-none-win_amd64.whl```
         
- 4. Configparser
+ 4. Configparser <br/>
   Run ```pip install configparser```
     
- 5. Cloudinary
+ 5. Cloudinary <br/>
   Run ```pip install cloudinary```
  
  
