@@ -34,11 +34,6 @@ Surveillance app takes images at a regular time interval defined by *detection_i
 ## Language used
 
  Python 2.7
- 
-## APIs used
- 1. Microsoft Cognitive Services Face APIs (for building face identification model)
- 2. Cloudinary APIs (for storing dataset)
- 
 
 ## Required Python Libraries
  1. Opencv2
@@ -47,7 +42,7 @@ Surveillance app takes images at a regular time interval defined by *detection_i
  5. Cloudinary
  
  ### Installing required libraries
- 1. Opencve 
+ 1. Opencv2
   * **Ubuntu/Linux** ```sudo apt-get install python-opencv```
   * **Windows** follow [this link](http://opencvpython.blogspot.in/2012/05/install-opencv-in-windows-for-python.html)
     
@@ -64,11 +59,30 @@ Surveillance app takes images at a regular time interval defined by *detection_i
     
  5. Cloudinary <br/>
   Run ```pip install cloudinary```
+  
+ 
+## APIs used
+ 1. Microsoft Cognitive Services Face APIs (for building face identification model)
+ 2. Cloudinary APIs (for storing dataset)
+ 
+### Setting up the APIs (Required for running project)
+#### MSFace API
+ 1. Register for MSFace API at https://azure.microsoft.com/en-in/services/cognitive-services/face/
+ 2. Put the API Key in cnf.ini file in place of MSFACE_API_KEY
+ 3. Replace *msface_api_url* in **MSFaceAPI.py** with your api base url
+ 4. Go to MSFace API Reference ([link](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236))
+ 5. Select Create under PersonGroup from left hand menu
+ 6. Select your API testing console
+ 7. Put **users** in personGroupId and API Key in Ocp-Apim-Subscription-Key. Then click send button. It will create a person group with name users which stores the resistered persons face data.
+ 
+#### Cloudinary API
+ 1. Register for Cloudinary APIs. ([link](https://cloudinary.com/users/register/free))
+ 2. Go to console. ([link](https://cloudinary.com/console))
+ 3. Put cloud name, api key and api secret in cfg.ini file.
+ 4. Create a folder for project named RTFRSS (or whaever you want to name it)
+ 5. Create two subfolders in RTFRSS named dataset and tmp
+ 6. Replace *cloudinary_dataset* and *cloudinary_tmp* in **register.py** and **main.py** with your cloudinary project dataset and tmp folder paths.
  
  
-
-## Project Structure
  
-
-## Database used
- sqlite3
+ 
