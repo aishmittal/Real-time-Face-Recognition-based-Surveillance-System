@@ -5,16 +5,17 @@ Real-time Face Recognition based Surveillance System uses [MS-FACE](https://azur
 ### New User Registration
 Register application used to register the new user by taking some information about user and storing the information in a database and creating personid using Microsoft Face APIs. After the Face Dataset is generated using Opencv2. this generated face dataset is later uploaded to cloudinary and Microsoft cognitive service face APIs. after uploading dataset to microsoft cognitive service a model is build and trained.
 
-python register.py
+1. Run register.py file using ```python register.py```. It will open pyqt GUI window.
+2. Edit the details of users to be registered.
+3. Click Verify Data button.
+4. Click Create User button if verification is successful. This will create user entry in database and create the new person id in msface api.
+5. Go to Generate face dataset tab.
+6. Click Start button to start the camera.
+7. Take 8 snapshot of face at different angles to train the model.
+8. Click Upload Dataset button to upload face images to cloudinary and send their links in msface api calls.
+9. Click train model to train the face identification model for given person.
+10. Close the register.py window register is now complete.
 
-1. Edit the details of users to be registered.
-2. Click Verify Data button.
-3. Click Create User button if verification is successful. This will create user entry in database and create the new person id in msface api.
-4. Go to Generate face dataset tab.
-5. Click Start button to start the camera.
-6. Take 8 snapshot of face at different angles to train the model.
-7. Click Upload Dataset button to upload face images to cloudinary and send their links in msface api calls.
-8. Click train model to train the face identification model for given person.
 #### Create User Tab
 ![register1](/screenshots/register1.png)
 
