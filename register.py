@@ -16,7 +16,6 @@ import datetime
 import string
 import shutil
 from time import gmtime, strftime, sleep
-from PIL import Image
 import sqlite3
 
 

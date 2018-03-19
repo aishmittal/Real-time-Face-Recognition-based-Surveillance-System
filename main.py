@@ -13,7 +13,6 @@ import string
 import random
 import shutil
 from time import gmtime, strftime, sleep
-from PIL import Image
 import sqlite3
 
 
@@ -191,8 +190,6 @@ class DynamicFrame(QWidget):
 
         detected_personid =     ''
         welcome_names=''
-        cascPath = 'haarcascade_frontalface_default.xml'
-        faceCascade = cv2.CascadeClassifier(cascPath)
         ramp_frames = 10
         
         print "Face identification started .........."

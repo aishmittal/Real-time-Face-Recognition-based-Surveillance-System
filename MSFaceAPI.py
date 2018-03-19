@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import httplib, urllib, base64, json
+import httplib, urllib, json
 import configparser
 config = configparser.ConfigParser()
 config.read('cfg.ini')

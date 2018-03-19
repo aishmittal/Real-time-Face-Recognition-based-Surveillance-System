@@ -3,7 +3,6 @@
 
 import os, sys
 import json
-from ast import literal_eval
 import cloudinary
 from cloudinary.uploader import upload
 from cloudinary.utils import cloudinary_url
