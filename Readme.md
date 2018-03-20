@@ -83,6 +83,3 @@ Surveillance app takes images at a regular time interval defined by *detection_i
  5. Create two subfolders in RTFRSS named dataset and tmp
  6. Replace *cloudinary_dataset* and *cloudinary_tmp* in **register.py** and **main.py** with your cloudinary project dataset and tmp folder paths.
  
- 
- 
- 
