@@ -245,15 +245,29 @@ class DynamicFrame(QWidget):
                             res = cursor.execute(comm)
                             res = cursor.fetchone()
                             if res:
+                                userid = res[0]
+                                uname = res[1]
                                 fname = res[2]
                                 lname = res[3]
                                 print "Welcome %s !" % (fname+' '+lname)
                                 detected_persons_cnt+=1
                                 detected_persons.append(fname)
                                 persons.append(fname)
-                            else:
-                                print "person id not found in database"
-                                persons.append('Unknown')
+                                now = datetime.datetime.now()
+                                comm = "SELECT * FROM users_present WHERE userid = %d and date = '%s' " % (int(userid), now.strftime("%Y-%m-%d"))
+                                #print comm
+                                res2=cursor.execute(comm)
+                                res2=cursor.fetchone()
+                                if res2==None:
+                                    format_str = "INSERT INTO users_present (id, userid) VALUES (NULL,%d)" %(int(userid)) 
+                                    #print format_str
+                                    conn.execute(format_str)
+                                    conn.commit()
+                                    print "Attendance marked for user %s " % uname
+                                else
+                                    print "Attendance already marked for user %s " % uname
+
+
 
                         
                         else:
