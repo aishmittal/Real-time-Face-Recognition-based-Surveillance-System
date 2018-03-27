@@ -2,3 +2,4 @@ dataset/
 tmp/
 unknowns/
 users.db
+cnf.ini
