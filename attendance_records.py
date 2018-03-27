@@ -142,7 +142,6 @@ class RecordsTab(QWidget):
                 comm = "SELECT COUNT(*) FROM users_present WHERE userid =? and date=?"
               
                 res = int_select_query(comm,(userid,date))
-                print res
                 if res and res[0]!=0:
                     present_cnt=present_cnt+1
                     presents.append(1)
